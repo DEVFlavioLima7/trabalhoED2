@@ -5,6 +5,7 @@
 
 Apresentador* criarApresentador(const char *nome, const char *categoria, const char *stream_atual) {
     // TODO: alocar e inicializar
+    
     return NULL;
 }
 
