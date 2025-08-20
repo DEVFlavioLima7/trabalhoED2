@@ -24,7 +24,7 @@ Stream* criarStream(const char *nome, const char *site) {
     return nova;
 }
 
-// Insere na BST
+
 Stream* inserirStreamBB(Stream *raiz, Stream *nova) {
     if (raiz != NULL) {
         int cmp = compararStrings(nova->nome, raiz->nome);
@@ -76,7 +76,7 @@ void liberarStreams(Stream *raiz) {
     if (raiz != NULL) {
         liberarStreams(raiz->esq);      // Libera subárvore esquerda
         liberarStreams(raiz->dir);      // Libera subárvore direita
-        //liberarCategorias(raiz->categorias); // Libera as categorias da stream
+        liberarCategorias(raiz->categorias); // Libera as categorias da stream
         free(raiz);                     // Libera o nó atual
     }
 }
