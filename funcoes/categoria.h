@@ -2,15 +2,6 @@
 #define CATEGORIA_H
 #include "tipos.h"
 #include "programa.h"
-typedef struct categoria {
-    TipoCategoria tipo;
-    char nome[100];
-    Programa *programas;   // ponteiro para árvore de programas
-
-    struct categoria *esq;
-    struct categoria *dir;
-    int altura; 
-} Categoria;
 
 
 Categoria* criarCategoria(TipoCategoria tipo, const char *nome);
